@@ -31,6 +31,8 @@ collections:
   crs:
     output: false
     sort_by: xp
+  definitions:
+    output: true
   homebrew:
     output: true
   worlds:
@@ -43,6 +45,11 @@ defaults:
       type: homebrew
     values:
       layout: homebrew
+  - scope:
+      path: ""
+      type: definitions
+    values:
+      layout: definition
   - scope:
       path: ""
     values:
