@@ -13,7 +13,9 @@ layout: default
     {% endif %}
   </header>
 
-  {% if type == "item" %}
+  {% if type == "creature" %}
+    {% include creature.html %}
+  {% elsif type == "item" %}
     {% include item.html %}
   {% elsif type == "spell" %}
     {% include spell.html %}
