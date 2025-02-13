@@ -21,4 +21,4 @@ Vorpal. When you attack a creature that has at least one head with this weapon a
 
 The scythe regains 1d6\* expended charges at dawn.
 
-\* changed 12 charges with 2 used every time to 6 charges with 1 used, and removed +2 bonus to regained charges at dawn.
+\*Changed 12 charges with 2 used every time to 6 charges with 1 used, and removed +2 bonus to regained charges at dawn.
