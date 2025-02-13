@@ -20,6 +20,7 @@ If it is "_customised_" then the item has been modified by me. The modifications
 
 {% for item in site.homebrew | sort: 'type', 'title' %}
 
-- **{{ item.path | split: "/" | last | split: "." | first | upcase }}** [{{ item.title }}]({{ site.baseurl | append: item.url }}) _({{ item.sources | join: ", " | replace: "_", "\_" }})_
+- **{{ item.path | split: "/" | last | split: "." | first | upcase }}** [{{ item.title }}]({{ site.baseurl | append: item.url }})  
+  Sources: _{{ item.sources | join: ", " | replace: "_", "\_" }}_
 
 {% endfor %}
