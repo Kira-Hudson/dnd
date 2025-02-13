@@ -1,0 +1,33 @@
+{% if page.item_type %}
+  <p>
+    <em>{{ page.item_type | default: "ITEM" }}, 
+      {{ page.rarity | default: "common" }} 
+      {% if page.attunement %}(requires attunement by {{ page.attunement | default: "any" }} character){% endif %}</em>
+  </p>
+{% endif %}
+
+<div class="flex-left child-width-fourth">
+  <p>
+    <strong>COST</strong> <br />
+    <span>{{ page.cost | default: "-" }}</span>
+  </p>
+
+  <p>
+    <strong>WEIGHT</strong> <br />
+    <span>{{ page.weight | default: "-" }}</span>
+  </p>
+
+  <p>
+    <strong>DAMAGE</strong> <br />
+    <span>{{ page.damage | default: "-" }}</span>
+  </p>
+
+  <p>
+    <strong>PROPERTIES</strong> <br />
+    <span>{{ page.properties | join: ", " | default: "-" }}</span>
+  </p>
+</div>
+
+<div>{{ content }}</div>
+
+<br />

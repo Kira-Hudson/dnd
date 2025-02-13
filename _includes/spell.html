@@ -1,0 +1,33 @@
+<p>
+  <em>{{page.level}}-level {{page.school}} spell {% if page.ritual %}(ritual){% endif %}</em>
+</p>
+
+<div class="flex-left child-width-fourth">
+  <p>
+    <strong>CASTING TIME</strong> <br />
+    <span>{{ page.casting_time | default: "-" }}</span>
+  </p>
+
+  <p>
+    <strong>RANGE</strong> <br />
+    <span>{{ page.range | default: "-" }}</span>
+  </p>
+
+  <p>
+    <strong>COMPONENTS</strong> <br />
+    <span>{{ page.components | default: "-" }}</span>
+  </p>
+
+  <p>
+    <strong>DURATION</strong> <br />
+    <span>{{ page.duration | default: "-" }}</span>
+  </p>
+</div>
+
+<div>{{ content }}</div>
+
+<br />
+
+<p>
+  <em><strong>Spell Lists:</strong> {{ page.classes | default: "No Classes Specified" }}</em>
+</p>

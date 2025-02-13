@@ -1,0 +1,8 @@
+.flex-left {
+    display: flex;
+}
+
+.flex-left.child-width-fourth > * {
+    width: 25%;
+    padding: 7px;
+}

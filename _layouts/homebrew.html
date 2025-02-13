@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+{% assign type = page.name | split: "." | first %}
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+
+    {% if page.source %}
+    <p>Source: <em>{{ page.source }}</em></p>
+    {% endif %}
+  </header>
+
+  {% if type == "item" %}
+    {% include item.html %}
+  {% elsif type == "spell" %}
+    {% include spell.html %}
+  {% else %}
+    <div class="post-content">{{ content }}</div>
+  {% endif %}
+
+  <footer class="post-footer">
+    {% if page.sources %}
+    <p>Sources: <em>{{ page.sources | sort | join: ", " }}</em></p>
+    {% endif %}
+  </footer>
+</article>
