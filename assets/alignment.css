@@ -2,7 +2,22 @@
     display: flex;
 }
 
+.flex-left.child-width-half > * {
+    width: 50%;
+    padding: 10px;
+}
+
 .flex-left.child-width-fourth > * {
     width: 25%;
     padding: 7px;
+}
+
+.flex-left.child-width-sixth > * {
+    width: 16.6666667%;
+    padding: 4px;
+}
+
+.columns-2 {
+    column-count: 2;
+    column-gap: 10px;
 }

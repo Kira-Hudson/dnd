@@ -28,6 +28,9 @@ github_username:  kira-hudson
 
 # Collections
 collections:
+  crs:
+    output: false
+    sort_by: xp
   homebrew:
     output: true
   worlds:

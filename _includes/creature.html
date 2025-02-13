@@ -1,0 +1,104 @@
+<p>
+  <em>
+    {{ page.size | default: "medium" }}, 
+    {{ page.creature_type | default: "humanoid" }}, 
+    {{ page.alignment | default: "unaligned" }}
+  </em>
+</p>
+
+<div class="flex-left child-width-fourth">
+  <p>
+    <strong>AC</strong> <br />
+    <span>{{ page.ac | default: "10" }}</span>
+  </p>
+
+  <p>
+    <strong>HP</strong> <br />
+    <span>{{ page.hp | default: "-" }}</span>
+  </p>
+
+  <p>
+    <strong>INITIATIVE</strong> <br />
+    <span>{{ page.initiative | default: "-" }}</span>
+  </p>
+
+  <p>
+    <strong>SPEED</strong> <br />
+    <span>{{ page.speed | default: "30 ft." }}</span>
+  </p>
+</div>
+
+<blockquote>
+  {% assign challenge = site.crs | where: 'rating', page.challenge | first %}
+  {% if challenge %}
+      <p>
+        <a href="{{site.baseurl}}/official5e/#challenge-ratings"><strong>Challenge Rating</strong></a> 
+        {{ challenge.rating }} 
+        <span>({{ challenge.xp }} XP)</span>
+        <span style="margin-left: 30px; text-align: right;"><strong>Proficiency Bonus</strong> +{{ challenge.pb }}</span>
+      </p>
+  {% endif %}
+</blockquote>
+
+<div class="flex-left child-width-sixth">
+  <p>
+    <strong>STR</strong> <br />
+    <span>{{ page.abilities[0] | default: "-" }}</span>
+  </p>
+
+  <p>
+    <strong>DEX</strong> <br />
+    <span>{{ page.abilities[1] | default: "-" }}</span>
+  </p>
+
+  <p>
+    <strong>CON</strong> <br />
+    <span>{{ page.abilities[2] | default: "-" }}</span>
+  </p>
+
+  <p>
+    <strong>INT</strong> <br />
+    <span>{{ page.abilities[3] | default: "-" }}</span>
+  </p>
+
+  <p>
+    <strong>WIS</strong> <br />
+    <span>{{ page.abilities[4] | default: "-" }}</span>
+  </p>
+
+  <p>
+    <strong>CHA</strong> <br />
+    <span>{{ page.abilities[5] | default: "-" }}</span>
+  </p>
+</div>
+
+<div>
+  <p><strong>Saving Throws</strong> <span>{{ page.saves | join: ", " | default: "-" }}</span></p>
+  
+  <p><strong>Skills</strong> <span>{{ page.skills | join: ", " | default: "-" }}</span></p>
+</div>
+
+<div class="columns-2">
+  <div>
+    <blockquote><h2 id="traits"><strong>Traits</strong></h2></blockquote>
+    
+    {% for trait in page.traits %}
+      <p><strong><em>{{ trait.name }}.</em></strong> {{ trait.desc }}</p>
+    {% endfor %}
+  </div>
+  
+  <div>
+    <blockquote><h2 id="actions"><strong>Actions</strong></h2></blockquote>
+    
+    {% for action in page.actions %}
+      <p><strong>{{ action.type | default: "action" | upcase | append: ":" }} <em>{{ action.name }}.</em></strong> {{ action.desc }}</p>
+    {% endfor %}
+  </div>
+</div>
+
+<hr />
+<br />
+
+<div>{{ content }}</div>
+
+<br />

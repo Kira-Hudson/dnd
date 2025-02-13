@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign type = page.name | split: "." | first %}
+{% assign type = page.path | split: "/" | last | split: "." | first %}
 
 <article class="post">
   <header class="post-header">
