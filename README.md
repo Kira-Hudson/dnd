@@ -1,6 +1,6 @@
-# D&D (Jekyll)
+# Kira's Dungeons and Dragons
 
-Is a Jekyll site for putting D&D-related content.
+Is a Jekyll site on which to put D&D-related content.
 
 ## Sections
 
