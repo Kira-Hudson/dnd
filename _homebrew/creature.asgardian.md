@@ -5,7 +5,7 @@ sources:
 size: medium
 creature_type: celestial
 alignment: lawful neutral
-ac: 16 (uru plate)
+ac: 19 (uru plate)
 hp: 180 (14d10 + 40)
 initiative: +1
 challenge: 8
